@@ -18,7 +18,7 @@
 	<meta property="og:type" content="article" />
 
     <!-- Website Title -->
-    <title>Leno - Mobile App HTML Landing Page Template</title>
+    
 
 	<!-- Favicon  -->
     <link rel="icon" href="<?php echo get_template_directory_uri(); ?>/assets/images/favicon.png">
@@ -79,6 +79,15 @@
                     <a class="nav-link page-scroll" href="#contact">CONTACT</a>
                 </li>
             </ul>
+            <?php
+                wp_nav_menu(
+                    array(
+                        'theme_location' => 'main-menu',
+                        'container_id' => 'navbarsExampleDefault',
+                        'items_wrap' => '<ul class="navbar-nav ml-auto">%3$s</ul>'
+                        )
+                    );
+            ?>
             <span class="nav-item social-icons">
                 <span class="fa-stack">
                     <a href="#your-link">
